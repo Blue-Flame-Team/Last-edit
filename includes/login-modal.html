@@ -1,0 +1,55 @@
+<!-- تحديث نموذج تسجيل الدخول مع محدد الدولة الجديد -->
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">تسجيل الدخول</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="login-form">
+                    <div class="form-group position-relative">
+                        <div class="country-code-select" id="country-selector">
+                            <div class="selected-country">
+                                <img src="/assets/icons/egypt-flag.svg" alt="مصر" class="flag-img" style="width: 24px; height: 18px; object-fit: cover; margin-left: 10px;">
+                                <span class="code">+20</span>
+                                <span class="dropdown-arrow">▼</span>
+                            </div>
+                            <div class="country-dropdown">
+                                <div class="country-item" data-code="+20" data-flag="/assets/icons/egypt-flag.svg">
+                                    <img src="/assets/icons/egypt-flag.svg" alt="مصر">
+                                    <span>مصر</span>
+                                    <span class="country-code">+20</span>
+                                </div>
+                                <div class="country-item" data-code="+966" data-flag="/assets/icons/saudi-flag.svg">
+                                    <img src="/assets/icons/saudi-flag.svg" alt="السعودية">
+                                    <span>السعودية</span>
+                                    <span class="country-code">+966</span>
+                                </div>
+                                <div class="country-item" data-code="+971" data-flag="/assets/icons/uae-flag.svg">
+                                    <img src="/assets/icons/uae-flag.svg" alt="الإمارات">
+                                    <span>الإمارات</span>
+                                    <span class="country-code">+971</span>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="tel" class="form-control" placeholder="رقم الهاتف" required autocomplete="tel">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="كلمة المرور" required autocomplete="current-password">
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="remember-me">
+                        <label class="form-check-label" for="remember-me">تذكرني</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">تسجيل الدخول</button>
+                    <div class="text-center mt-3">
+                        <a href="#" data-toggle="modal" data-target="#forgot-password-modal">نسيت كلمة المرور؟</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> 

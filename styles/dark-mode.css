@@ -1,0 +1,89 @@
+/* التوب بار والناف بار - شفاف دائماً */
+.top-bar,
+.nav-menu,
+.dark-mode .top-bar,
+.dark-mode .nav-menu,
+.dark-contrast .top-bar,
+.dark-contrast .nav-menu,
+[class*="dark"] .top-bar,
+[class*="dark"] .nav-menu,
+body.dark-mode .top-bar,
+body.dark-mode .nav-menu,
+body.dark-contrast .top-bar,
+body.dark-contrast .nav-menu {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+.top-bar *,
+.nav-menu *,
+.dark-mode .top-bar *,
+.dark-mode .nav-menu *,
+.dark-contrast .top-bar *,
+.dark-contrast .nav-menu *,
+[class*="dark"] .top-bar *,
+[class*="dark"] .nav-menu *,
+body.dark-mode .top-bar *,
+body.dark-mode .nav-menu *,
+body.dark-contrast .top-bar *,
+body.dark-contrast .nav-menu * {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* تنسيق العناصر الأخرى */
+.dark-mode .main-content *:not(.top-bar):not(.top-bar *):not(.nav-menu):not(.nav-menu *) {
+    color: #2A2A2A !important;
+}
+
+/* Primary button in contrast/dark mode */
+body.contrast-mode .btn.primary-btn,
+body.dark-mode .btn.primary-btn {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+body.contrast-mode .btn.primary-btn:hover,
+body.dark-mode .btn.primary-btn:hover {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+}
+
+/* Footer وقسم المشاركة الاجتماعية في حالة التباين الأسود */
+body.dark-contrast .footer-bottom,
+.dark-contrast .footer-bottom,
+body.dark-contrast .copyright,
+.dark-contrast .copyright,
+body.dark-contrast .main-footer,
+.dark-contrast .main-footer,
+body.dark-contrast footer,
+.dark-contrast footer,
+body.dark-contrast .social-share-section,
+.dark-contrast .social-share-section {
+    background-color: #090909 !important;
+    background: #090909 !important;
+}
+
+/* تطبيق اللون على كل عناصر الفوتر بقوة */
+body.dark-contrast footer *,
+body.dark-contrast .main-footer *,
+body.dark-contrast .footer-bottom *,
+body.dark-contrast .footer-bottom .container,
+body.dark-contrast .footer-bottom .container *,
+body.dark-contrast .copyright *,
+body.dark-contrast .copyright-text,
+body.dark-contrast .footer-bottom-links,
+body.dark-contrast .footer-bottom-links * {
+    background-color: #090909 !important;
+    background: #090909 !important;
+}
+
+/* التأكد من أن العناصر الداخلية في social-share-section تحافظ على خلفيتها */
+body.dark-contrast .social-share-section > div,
+.dark-contrast .social-share-section > div {
+    background-color: #f5f5f5 !important;
+    background: #f5f5f5 !important;
+}

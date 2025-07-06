@@ -1,0 +1,294 @@
+﻿/* تنسيقات قائمة الإعدادات والتباين */
+
+.settings-menu {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none;
+    z-index: 1000;
+    top: calc(100% + 10px);
+    right: 0;
+    width: 180px;
+}
+
+.settings-menu.show {
+    display: block;
+}
+
+.theme-toggle-main, .theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0d9488;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin: 5px 0;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle-main:hover, .theme-toggle:hover {
+    background-color: #0a776b;
+}
+
+.theme-toggle-main img, .theme-toggle img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.theme-options {
+    display: none;
+    flex-direction: column;
+}
+
+.theme-options.active {
+    display: flex;
+}
+
+.theme-toggle-light {
+    background-color: #fff;
+    color: #0d9488;
+    border: 1px solid #0d9488;
+}
+
+.theme-toggle-dark {
+    background-color: #121212;
+    color: #0d9488;
+}
+
+/* Estilos para el menú de configuraciones */
+.settings-menu {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 200px;
+    padding: 10px;
+    display: none;
+}
+
+.settings-toggle-btn {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+.settings-option {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    margin: 5px 0;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.settings-option:hover {
+    background-color: #f5f5f5;
+}
+
+.settings-option img {
+    width: 20px;
+    height: 20px;
+}
+
+.settings-option span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.contrast-option {
+    background-color: #00a59a;
+}
+
+.stats-option {
+    background-color: #00bdb6;
+}
+
+.logout-option {
+    background-color: #e05d44;
+}
+
+.settings-option i {
+    font-size: var(--font-lg);
+}
+
+/* Estilos adicionales para la visualización del menú */
+.settings-menu.show {
+    display: block;
+}
+
+/* Estilos para el submenú de contraste */
+.contrast-submenu {
+    display: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.contrast-submenu.show {
+    display: block;
+}
+
+.contrast-light {
+    background-color: #00a59a;
+}
+
+.contrast-dark {
+    background-color: #000;
+}
+
+/* نمط الوضع الداكن - تبديل المتغيرات */
+body:not(.home-page).dark-mode {
+    /* تحويل جميع الألوان الخضراء بدرجاتها المختلفة إلى اللون الأسود */
+    --primary-color: #000000 !important;
+    --secondary-color: #000000 !important;
+    --dark-blue: #000000 !important;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body:not(.home-page).dark-mode .main-content,
+body:not(.home-page).dark-mode .content-area {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* الناف بار والتوب بار لا يتأثران */
+body.dark-mode .top-bar,
+body.dark-mode .navbar {
+    background: transparent;
+}
+
+/* تحويل جميع الألوان الخضراء بدرجاتها المختلفة إلى اللون الأسود */
+body:not(.home-page).dark-mode [style*="#00937B"],
+body:not(.home-page).dark-mode [style*="#00937b"],
+body:not(.home-page).dark-mode [style*="#17a891"],
+body:not(.home-page).dark-mode [style*="#148f7c"],
+body:not(.home-page).dark-mode [style*="#00827a"],
+body:not(.home-page).dark-mode [style*="#00a19a"],
+body:not(.home-page).dark-mode [style*="#24516c"],
+body:not(.home-page).dark-mode [style*="#0d9488"],
+body:not(.home-page).dark-mode [style*="rgb(0, 147, 123)"],
+body:not(.home-page).dark-mode [style*="rgb(23, 168, 145)"],
+body:not(.home-page).dark-mode [style*="rgb(20, 143, 124)"],
+body:not(.home-page).dark-mode [style*="rgb(0, 130, 122)"],
+body:not(.home-page).dark-mode [style*="rgb(0, 161, 154)"],
+body:not(.home-page).dark-mode [style*="rgb(13, 148, 136)"],
+body:not(.home-page).dark-mode [style*="teal"],
+body:not(.home-page).dark-mode [style*="green"] {
+    color: #000000 !important;
+    /* background-color: #000000 !important; */
+    border-color: #000000 !important;
+}
+
+body:not(.home-page).dark-mode .main-footer{
+    background-color: #121212 !important;
+
+}
+
+body:not(.home-page).dark-mode .footer-bottom{
+    background-color: #090909 !important;
+
+}
+
+
+body:not(.home-page).dark-mode .article-title,
+body:not(.home-page).dark-mode .content-title,
+body:not(.home-page).dark-mode .page-title,
+body:not(.home-page).dark-mode .section-title,
+body:not(.home-page).dark-mode .article-title,
+body:not(.home-page).dark-mode .content-title,
+body:not(.home-page).dark-mode .page-title,
+body:not(.home-page).dark-mode .section-title,
+body:not(.home-page).dark-mode .article-date,
+body:not(.home-page).dark-mode .article-full-date,
+body:not(.home-page).dark-mode .related-items p,
+body:not(.home-page).dark-mode desktop-similar-news h3,
+body:not(.home-page).dark-mode #about-site-title,
+body:not(.home-page).dark-mode .support-icon-fixed img,
+body:not(.home-page).dark-mode .terms-title,
+body:not(.home-page).dark-mode .analytics-title,
+body:not(.home-page).dark-mode .breadcrumb  .terms-title,
+body:not(.home-page).dark-mode .recent-title,
+body:not(.home-page).dark-mode .visits-header,
+body:not(.home-page).dark-mode .cabinet-header h1,h2,
+body:not(.home-page).dark-mode .news-date span,
+body:not(.home-page).dark-mode .faq-title,
+body:not(.home-page).dark-mode .installment-header h1,
+body:not(.home-page).dark-mode .mobile-similar-news h3,
+body:not(.home-page).dark-mode .recent-title,
+body:not(.home-page).dark-mode .recent-title,
+body:not(.home-page).dark-mode .recent-title,
+body:not(.home-page).dark-mode .recent-title {
+    background-color: none !important;
+    color: #000000 !important;
+
+}
+/* نمط اللون الأسود في CSS */
+body:not(.home-page).dark-mode .main-footer,
+body:not(.home-page).dark-mode .teal-color,
+body:not(.home-page).dark-mode .teal-bg,
+body:not(.home-page).dark-mode .green-color,
+body:not(.home-page).dark-mode .green-bg,
+body:not(.home-page).dark-mode [class*="teal"],
+body:not(.home-page).dark-mode [class*="green"],
+body:not(.home-page).dark-mode .theme-color,
+body:not(.home-page).dark-mode .btn-primary,
+body:not(.home-page).dark-mode .main-heading,
+body:not(.home-page).dark-mode .card-header,
+body:not(.home-page).dark-mode .nav-link.active,
+body:not(.home-page).dark-mode .theme-bg,
+body:not(.home-page).dark-mode .view-all-btn,
+body:not(.home-page).dark-mode .terms-item button,
+body:not(.home-page).dark-mode .service-tab :active button,
+body:not(.home-page).dark-mode .search-button button {
+    color: #FFFFFF !important;
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+}
+
+/* نمط الوضع الفاتح - تبديل المتغيرات */
+body:not(.home-page).light-mode {
+    --black: #17a891 !important;
+}
+
+body:not(.home-page).light-mode *[style*="black"]:not(h5.terms-subtitle),
+body:not(.home-page).light-mode *[style*="#000000"]:not(h5.terms-subtitle),
+body:not(.home-page).light-mode *[style*="rgb(0, 0, 0)"]:not(h5.terms-subtitle),
+body:not(.home-page).light-mode *[style*="rgb(0,0,0)"]:not(h5.terms-subtitle) {
+    color: rgb(0, 147, 123) !important;
+    background-color: rgb(0, 147, 123) !important;
+    border-color: rgb(0, 147, 123) !important;
+}
+
+/* نمط اللون الأسود في CSS */
+body:not(.home-page).light-mode .black-bg,
+body:not(.home-page).light-mode .btn-dark,
+body:not(.home-page).light-mode .dark-section,
+body:not(.home-page).light-mode .dark-card,
+body:not(.home-page).light-mode .footer,
+body:not(.home-page).light-mode .black-text {
+    color: #FFFFFF !important;
+    background-color: rgb(0, 147, 123) !important;
+    border-color: rgb(0, 147, 123) !important;
+}
+
+/* تنسيق حاوية زر الإعدادات */
+.main-icons-group {
+    position: relative;
+}
+

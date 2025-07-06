@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلب خدمة الأسانيد القانونية</title>
+    
+    <!-- الخطوط -->
+    <link href="https://fonts.googleapis.com/earlyaccess/droidarabickufi.css" rel="stylesheet">
+    
+    <style>
+        /* تطبيق خط Droid Arabic Kufi على كامل الصفحة */
+        * {
+            font-family: "Droid Arabic Kufi", sans-serif !important;
+        }
+        
+        body, html {
+            font-family: "Droid Arabic Kufi", sans-serif !important;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        /* تنسيق النموذج - مطابق للتصميم المطلوب تماماً */
+        .form-container {
+            background-color: white;
+            margin: 50px auto;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .form-title {
+            font-family: 'Droid Arabic Kufi', Arial, sans-serif;
+            font-weight: 700;
+            font-size: 21.99px;
+            line-height: 150%;
+            letter-spacing: 0%;
+            text-align: center;
+            color: #00a19a;
+            margin-bottom: 25px !important;
+        }
+        
+        .asanid-form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        
+        .form-group {
+            padding: 0 !important;
+        }
+        
+        .form-input {
+            width: 100%;
+            height: 45px;
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+            padding: 0 15px;
+            text-align: right;
+            font-family: 'Droid Arabic Kufi', Arial, sans-serif;
+            font-size: 14px;
+            box-sizing: border-box;
+            background-color: #f8f9fa;
+            margin: 0 !important;
+        }
+        
+        .form-textarea {
+            width: 100%;
+            height: 120px;
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            text-align: right;
+            font-family: 'Droid Arabic Kufi', Arial, sans-serif;
+            font-size: 14px;
+            box-sizing: border-box;
+            background-color: #f8f9fa;
+            resize: vertical;
+            min-height: 120px;
+            margin: 0 !important;
+        }
+        
+        .phone-group {
+            display: flex;
+            gap: 10px;
+            padding: 0 !important;
+        }
+        
+        .phone-input {
+            flex: 1;
+        }
+        
+        .country-code {
+            width: 80px;
+            height: 45px;
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8f9fa;
+            gap: 5px;
+        }
+        
+        .note-text {
+            font-family: Droid Arabic Kufi;
+            font-weight: 400;
+            font-size: 6.13px;
+            line-height: 150%;
+            letter-spacing: 0%;
+            text-align: right;
+            color: black;
+            margin: 0 !important;
+        }
+        
+        .asterisk {
+            color: #FF5959;
+        }
+        
+        .description-section {
+            padding: 0 !important;
+            text-align: right;
+        }
+        
+        .description-title {
+            font-family: Droid Arabic Kufi;
+            font-weight: 400;
+            font-size: 8.57px;
+            line-height: 150%;
+            letter-spacing: 0%;
+            text-align: right;
+            color: #00a19a;
+            margin: 0 0 5px 0 !important;
+        }
+        
+        .description-text {
+            font-family: Droid Arabic Kufi;
+            font-weight: 400;
+            font-size: 7.35px;
+            line-height: 150%;
+            letter-spacing: 0%;
+            text-align: right;
+            color: #666;
+            margin: 0 !important;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            height: 45px;
+            background-color: #00a19a;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-family: 'Droid Arabic Kufi', Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 0 !important;
+        }
+        
+        .submit-btn:hover {
+            background-color: #008f89;
+        }
+        
+        .back-btn {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+            font-weight: bold;
+        }
+        
+        .back-btn:hover {
+            color: #00a19a;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <button class="back-btn" onclick="window.history.back()" title="العودة">←</button>
+        
+        <h1 class="form-title">خدمة الاسانيد القانونية</h1>
+        
+        <form class="asanid-form" id="asanidPcForm">
+            <!-- الاسم بالكامل -->
+            <div class="form-group">
+                <input type="text" id="fullName" class="form-input" placeholder="الاسم بالكامل" required>
+            </div>
+            
+            <!-- اسم المستخدم -->
+            <div class="form-group">
+                <input type="text" id="username" class="form-input" placeholder="اسم المستخدم" required>
+            </div>
+            
+            <!-- البريد الإلكتروني -->
+            <div class="form-group">
+                <input type="email" id="email" class="form-input" placeholder="البريد الالكتروني" required>
+            </div>
+            
+            <!-- نص تحت البريد الإلكتروني -->
+            <div class="form-group">
+                <p class="note-text">
+                    <span class="asterisk">*</span>سيتم التواصل معكم عن طريق البريد الالكتروني
+                </p>
+            </div>
+            
+            <!-- رقم الهاتف مع كود الدولة -->
+            <div class="phone-group">
+                <input type="tel" id="phone" class="form-input phone-input" placeholder="رقم الهاتف" required>
+                <div class="country-code">
+                    <span style="font-size: 16px;">🇪🇬</span>
+                    <span style="font-family: 'Droid Arabic Kufi', Arial, sans-serif; font-size: 12px; color: #666;">+20</span>
+                </div>
+            </div>
+            
+            <!-- الموضوع -->
+            <div class="form-group">
+                <textarea id="subject" class="form-textarea" placeholder="الموضوع" required></textarea>
+            </div>
+            
+            <!-- النص التوضيحي -->
+            <div class="description-section">
+                <h4 class="description-title">عزيزنا العميل:</h4>
+                <p class="description-text">شكرا لكم سوف يتم اعداد الاسانيد المطلوبة في اقرب وقت ممكن وسنقوم بارسالها لكم علي بريدكم الالكتروني</p>
+            </div>
+            
+            <!-- زر الإرسال -->
+            <button type="submit" class="submit-btn">إرسال</button>
+        </form>
+    </div>
+
+    <script>
+        // معالجة إرسال النموذج
+        document.getElementById('asanidPcForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const fullName = document.getElementById('fullName').value;
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = document.getElementById('subject').value;
+
+            // التحقق من ملء الحقول الأساسية
+            if (!fullName || !email || !subject) {
+                alert('يرجى ملء الحقول المطلوبة: الاسم بالكامل، البريد الإلكتروني، والموضوع');
+                return;
+            }
+
+            // التحقق من صحة البريد الإلكتروني
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('يرجى إدخال بريد إلكتروني صحيح');
+                return;
+            }
+
+            // رسالة نجاح
+            alert('تم إرسال طلبكم بنجاح! سنتواصل معكم قريباً على البريد الإلكتروني المذكور.');
+            
+            // إعادة تعيين النموذج
+            this.reset();
+        });
+
+        // تأثيرات تفاعلية
+        const inputs = document.querySelectorAll('.form-input, .form-textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.style.borderColor = '#00a19a';
+                this.style.backgroundColor = 'white';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.style.borderColor = '#e0e0e0';
+                this.style.backgroundColor = '#f8f9fa';
+            });
+        });
+    </script>
+
+    <script src="scripts/font-resize.js"></script>
+
+    <!-- ملف JavaScript للتصميم المتجاوب -->
+    <script src="../scripts/add-responsive-css.js"></script>
+</body>
+</html> 
